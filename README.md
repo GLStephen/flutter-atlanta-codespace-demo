@@ -6,6 +6,10 @@
 
 ## to demonstrate key elements
 
+### Purpose
+
+* The purpose of GitHub Codespaces is to provide a cloud-based development environment that simplifies and accelerates the software development process.
+
 ### high level features
 
 The most important features of GitHub Codespaces include:
@@ -50,11 +54,40 @@ The most important features of GitHub Codespaces include:
     }
   }
 ```
+
+### Advanced Feature Support
+
 * Also Supports
+    * Established Spec https://containers.dev/implementors/spec/
     * Docker Compose File
       * multiple images
     * Startup Scripts (shell)
     * Common Runtimes
       * https://github.com/devcontainers/images
       * or Roll your Own via a Dockerfile
-    * Plugins
+    * Plugins/Features
+      * If using an image above you can add:
+        * Docker-in-Docker
+        * go
+        * npm/node
+        * ruby
+        * python
+        * terraform
+        * more
+        * https://github.com/devcontainers/features/
+
+### Collaboration
+* shared secrets - repo & org level
+* instantly create environment from a branch
+* share public URL with obfuscated URL
+
+### Real World Examples
+
+* We wanted containerize 6 apps in our organization and move to K8S if needed, with Docker swarm as an initial deployment target
+* We chose Github Codespaces as the first target because it:
+   * simplified development and onboarding
+   * made dev environment reproducible
+   * forced containerization of dev, while still allowing legacy deployment processes
+   * uses containerization while Docker compose deployments document service interactions, ports, etc.
+   * integrations nicely with Github Actions for CI/CD when the time cam later
+       
