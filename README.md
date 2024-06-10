@@ -31,4 +31,30 @@ The most important features of GitHub Codespaces include:
 15. **Security and Isolation**
     - Each codespace runs in a secure, isolated environment, reducing the risk of security issues and ensuring that development environments do not interfere with each other.
 
-These features collectively enhance productivity, streamline the development process, and support effective collaboration among developers.
+### Setup
+
+```
+{
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "forwardPorts": [3000],
+    "name": "Flutter",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "Dart-Code.dart-code",
+          "Dart-Code.flutter"
+        ]
+      }
+    }
+  }
+```
+* Also Supports
+    * Docker Compose File
+      * multiple images
+    * Startup Scripts (shell)
+    * Common Runtimes
+      * https://github.com/devcontainers/images
+      * or Roll your Own via a Dockerfile
+    * Plugins
