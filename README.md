@@ -73,6 +73,7 @@ The most important features of GitHub Codespaces include:
         * ruby
         * python
         * terraform
+        * NVIDIA Cuda
         * more
         * https://github.com/devcontainers/features/
 
@@ -80,6 +81,12 @@ The most important features of GitHub Codespaces include:
 * shared secrets - repo & org level
 * instantly create environment from a branch
 * share public URL with obfuscated URL
+
+### Scaling
+
+* 2 core, 8gb ram, 32gb storage
+* We spend $50.00/month per dev
+* GPU supported in some plan types
 
 ### Real World Examples
 
@@ -90,4 +97,10 @@ The most important features of GitHub Codespaces include:
    * forced containerization of dev, while still allowing legacy deployment processes
    * uses containerization while Docker compose deployments document service interactions, ports, etc.
    * integrations nicely with Github Actions for CI/CD when the time cam later
+ 
+### Demo
+
+* Simple Flutter App
+
+  
        
