@@ -84,9 +84,9 @@ The most important features of GitHub Codespaces include:
 
 ### Scaling
 
-* 2 core, 8gb ram, 32gb storage
-* We spend $50.00/month per dev
-* GPU supported in some plan types
+* 2 core, 8gb ram, 32gb storage up to 32 core - billed on cores
+* We spend approximately $50.00/month per dev
+* GPU supported in some plan types and with request
 
 ### Real World Examples
 
@@ -101,6 +101,10 @@ The most important features of GitHub Codespaces include:
 ### Demo
 
 * Simple Flutter App
+* Challenges:
+   * No emulator support - but full web and really easily
+ 
+### Questions?
 
   
        
