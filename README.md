@@ -23,7 +23,7 @@ Delivery of value to investors
 
 The first is pretty universally required and absolutely required to accomplish the second in a product company.
 
-### development ergonomics is key
+### Measuring Value Delivery
 
 DORA is the largest and longest running research program of its kind, that seeks to understand the capabilities that drive software delivery and operations performance. DORA helps teams apply those capabilities, leading to better organizational performance.
 
@@ -32,7 +32,7 @@ https://dora.dev/
 * Value Flow, Value Stream, etc. - https://dora.dev/devops-capabilities/process/work-visibility-in-value-stream/ - how does dev work flow all the way to value for the customer?
 * Track 4 Key Metrics called "DORA Metrics"
 
-### What are Dora Metrcis?
+### What are Dora Metrics?
 
 * 2 Categories, Each with Two Metrics
 * Throughput
@@ -43,7 +43,9 @@ https://dora.dev/
   * FDRT - Failed Deployment Recovery Time - measures the time it takes to recover from a failed deployment. A lower recovery time indicates a more resilient and responsive system.
 * Optimizing CLT, DF & FDRT and starts with Reliable, Repeatable, Adapatable Development Environments
 
-### what do you need
+### development ergonomics or developer experience (DX) is key
+
+key components: (this isn't all of them, but it's the ones relevant today)
 
 1. ability to quickly onboard new devs
 2. ability to quickly change tasks
@@ -147,6 +149,11 @@ The most important features of GitHub Codespaces include:
    * forced containerization of dev, while still allowing legacy deployment processes
    * uses containerization while Docker compose deployments document service interactions, ports, etc.
    * integrations nicely with Github Actions for CI/CD when the time came later
+* Not just a better dev environment for us, but an effective step along the path to more robust integration and deployment processes.
+
+### Demo
+
+* Simple Flutter App
  
 ### Challenges
 
@@ -155,14 +162,15 @@ The most important features of GitHub Codespaces include:
    * adb port forwarding: https://stackoverflow.com/questions/13278429/how-to-set-up-adb-for-remote-machine-development-and-local-device-deployment
    * adb "-a" all ports
 5. Firebase emulation can be tricky, but works, GIYF
-
-### Demo
-
-* Simple Flutter App
-* Challenges:
-   * No emulator support - but full web and really easily
  
 ### Questions?
+
+------------------------------------------------------------------------------------------------
+
+R questions:
+
+
+
 
   
        
