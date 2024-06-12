@@ -30,9 +30,20 @@ https://dora.dev/
     * FDRT - Failed Deployment Recovery Time - 
 * Optimizing CLT, DF & FDRT and starts with Reliable, Repeatable, Adapatable Development Environments
 
-### Purpose
+### what do you need
+
+1. ability to quickly onboard new devs
+2. ability to quickly change tasks
+3. ability to keep work in small batches
+4. ability to immediately return to a previous versions --dev-- environment not just production environment
+
+Which means: having a dev environment tightly coupled with your change control
+
+### So.... Github Codespaces
 
 * The purpose of GitHub Codespaces is to provide a cloud-based development environment that simplifies and accelerates the software development process.
+
+* by having a dev environment tightly coupled with your change control
 
 ### high level features
 
