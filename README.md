@@ -9,7 +9,9 @@
 ### not a flutter talk
 
 * Delivering Value
-* With Some Flutter along the way...
+* With Some Code Along the Way...
+* In Dart
+* ... and Flutter
 
 ### my key responsibilities
 
