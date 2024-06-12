@@ -30,6 +30,10 @@ DORA is the largest and longest running research program of its kind, that seeks
 https://dora.dev/
 
 * Value Flow, Value Strem, etc. - https://dora.dev/devops-capabilities/process/work-visibility-in-value-stream/ - how does dev work flow all the way to value for the customer?
+* Track 4 Key Metrics called "DORA Metrics"
+
+### What are Dora Metrcis?
+ 
 * DORA Metrics
   * Two Categories
   * Throughput
