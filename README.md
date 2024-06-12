@@ -9,7 +9,7 @@
 ### not a flutter talk
 
 * Delivering Value
-* With Some Flutter too...
+* With Some Flutter along the way...
 
 ### my key responsibilities
 
