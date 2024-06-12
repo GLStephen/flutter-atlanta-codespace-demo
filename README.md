@@ -146,7 +146,7 @@ The most important features of GitHub Codespaces include:
    * made dev environment reproducible
    * forced containerization of dev, while still allowing legacy deployment processes
    * uses containerization while Docker compose deployments document service interactions, ports, etc.
-   * integrations nicely with Github Actions for CI/CD when the time cam later
+   * integrations nicely with Github Actions for CI/CD when the time came later
  
 ### Challenges
 
