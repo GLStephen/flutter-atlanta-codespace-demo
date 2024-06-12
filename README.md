@@ -12,7 +12,7 @@ As a CTO...
 Delivery of value to customers
 
 As a Founder...
-Delivery of value to investors
+Delivery of value to investors 
 
 ### development ergonomics is key
 
