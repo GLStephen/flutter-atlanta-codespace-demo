@@ -43,6 +43,8 @@ https://dora.dev/
   * FDRT - Failed Deployment Recovery Time - measures the time it takes to recover from a failed deployment. A lower recovery time indicates a more resilient and responsive system.
 * Optimizing CLT, DF & FDRT and starts with Reliable, Repeatable, Adapatable Development Environments
 
+### Questions about DORA?
+
 ### development ergonomics or developer experience (DX) is key
 
 key components: (this isn't all of them, but it's the ones relevant today)
