@@ -98,6 +98,14 @@ The most important features of GitHub Codespaces include:
    * uses containerization while Docker compose deployments document service interactions, ports, etc.
    * integrations nicely with Github Actions for CI/CD when the time cam later
  
+### Challenges
+
+1. device emulation
+   2. hacky solution here using a Tailscale mesh network: https://www.reddit.com/r/androiddev/comments/11fzzjk/how_android_devs_can_use_github_codespaces/
+   3. adb port forwarding: https://stackoverflow.com/questions/13278429/how-to-set-up-adb-for-remote-machine-development-and-local-device-deployment
+   4. adb "-a" all ports
+
+ 
 ### Demo
 
 * Simple Flutter App
