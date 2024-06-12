@@ -15,6 +15,9 @@
 
 ### my key responsibilities
 
+As a Contributor...
+Delivery of value to customers
+
 As a CTO...
 Delivery of value to customers
 
