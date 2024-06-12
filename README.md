@@ -6,6 +6,30 @@
 
 ## to demonstrate key elements
 
+### my key responsibilities
+
+As a CTO...
+Delivery of value to customers
+
+As a Founder...
+Delivery of value to investors
+
+### development ergonomics is key
+
+DORA is the largest and longest running research program of its kind, that seeks to understand the capabilities that drive software delivery and operations performance. DORA helps teams apply those capabilities, leading to better organizational performance.
+
+https://dora.dev/
+
+* DORA Metrics
+  * Two Categories
+  * Throughput
+    * CLT - Change Lead Time - 
+    * DF - Deployment Frequency -
+  * Stability
+    * CFP - Change Fail Percentage - 
+    * FDRT - Failed Deployment Recovery Time - 
+* Optimizing CLT, DF & FDRT and starts with Reliable, Repeatable, Adapatable Development Environments
+
 ### Purpose
 
 * The purpose of GitHub Codespaces is to provide a cloud-based development environment that simplifies and accelerates the software development process.
