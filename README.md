@@ -39,11 +39,13 @@ https://dora.dev/
   * CLT - Change Lead Time - measures the time it takes for a code commit or change to be successfully deployed to production. It reflects the efficiency of your delivery pipeline
   * DF - Deployment Frequency - measures how often application changes are deployed to production. Higher deployment frequency indicates a more agile and responsive delivery process
 * Stability
-  * CFP - Change Fail Percentage - measures the percentage of deployments that cause failures in production, requiring hotfixes or rollbacks. A lower change failure rate indicates a more reliable delivery process.
+  * CFP - Change Fail Percentage - measures the percentage of deployments that cause failures in production, ---requiring hotfixes or rollbacks---. A lower change failure rate indicates a more reliable delivery process. This is not bugs! It's failures that require hotfixes and rollbacks.
   * FDRT - Failed Deployment Recovery Time - measures the time it takes to recover from a failed deployment. A lower recovery time indicates a more resilient and responsive system.
 * Optimizing CLT, DF & FDRT and starts with Reliable, Repeatable, Adapatable Development Environments
 
 ### Questions about DORA?
+
+- few orgs are perfect - if you're able to have very low FDRT you may allow higher CFP, you all in the mobile world with device updates and lead times for app stores may have a fixed lower bound for FDRT so you have to improve CFP
 
 ### development ergonomics or developer experience (DX) is key
 
