@@ -6,6 +6,11 @@
 
 ## to demonstrate key elements
 
+### not a flutter talk
+
+* Delivering Value
+* With Some Flutter too...
+
 ### my key responsibilities
 
 As a CTO...
