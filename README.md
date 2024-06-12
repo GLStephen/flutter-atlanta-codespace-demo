@@ -22,6 +22,7 @@ DORA is the largest and longest running research program of its kind, that seeks
 
 https://dora.dev/
 
+* Value Flow, Value Strem, etc.
 * DORA Metrics
   * Two Categories
   * Throughput
