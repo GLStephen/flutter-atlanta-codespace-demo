@@ -14,6 +14,8 @@ Delivery of value to customers
 As a Founder...
 Delivery of value to investors 
 
+The first is a primary driver of the second.
+
 ### development ergonomics is key
 
 DORA is the largest and longest running research program of its kind, that seeks to understand the capabilities that drive software delivery and operations performance. DORA helps teams apply those capabilities, leading to better organizational performance.
