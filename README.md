@@ -14,7 +14,7 @@ Delivery of value to customers
 As a Founder...
 Delivery of value to investors 
 
-The first is a primary driver of the second.
+The first is required to accomplish the second in a product company.
 
 ### development ergonomics is key
 
