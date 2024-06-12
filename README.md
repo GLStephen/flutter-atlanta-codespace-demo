@@ -21,7 +21,7 @@ Delivery of value to customers
 As a Founder...
 Delivery of value to investors 
 
-The first is required to accomplish the second in a product company.
+The first is pretty universally required and absolutely required to accomplish the second in a product company.
 
 ### development ergonomics is key
 
