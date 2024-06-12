@@ -49,6 +49,7 @@ https://dora.dev/
 
 ### development ergonomics or developer experience (DX) is key
 
+the second or third step, and often the most repeated, in the value flow is: Write Code
 key components: (this isn't all of them, but it's the ones relevant today)
 
 1. ability to quickly onboard new devs
