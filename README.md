@@ -33,15 +33,14 @@ https://dora.dev/
 * Track 4 Key Metrics called "DORA Metrics"
 
 ### What are Dora Metrcis?
- 
-* DORA Metrics
-  * Two Categories
-  * Throughput
-    * CLT - Change Lead Time - 
-    * DF - Deployment Frequency -
-  * Stability
-    * CFP - Change Fail Percentage - 
-    * FDRT - Failed Deployment Recovery Time - 
+
+* 2 Categories, Each with Two Metrics
+* Throughput
+  * CLT - Change Lead Time - measures the time it takes for a code commit or change to be successfully deployed to production. It reflects the efficiency of your delivery pipeline
+  * DF - Deployment Frequency - measures how often application changes are deployed to production. Higher deployment frequency indicates a more agile and responsive delivery process
+* Stability
+  * CFP - Change Fail Percentage - measures the percentage of deployments that cause failures in production, requiring hotfixes or rollbacks. A lower change failure rate indicates a more reliable delivery process.
+  * FDRT - Failed Deployment Recovery Time - measures the time it takes to recover from a failed deployment. A lower recovery time indicates a more resilient and responsive system.
 * Optimizing CLT, DF & FDRT and starts with Reliable, Repeatable, Adapatable Development Environments
 
 ### what do you need
