@@ -58,6 +58,8 @@ Which means: having a dev environment tightly coupled with your change control
 
 * by having a dev environment tightly coupled with your change control
 
+* cant just get code back to a previous state, may need to get whole environment back
+
 ### high level features
 
 The most important features of GitHub Codespaces include:
