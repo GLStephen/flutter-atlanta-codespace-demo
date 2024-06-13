@@ -1,9 +1,12 @@
-
-version: '3.7'
+version: "3.7"
 services:
   mariadb:
     build: services/mariadb
-    volumes: [ ..:/pubxmono, ./services/mariadb/schema.sql:/docker-entrypoint-initdb.d/schema.sql:rw ]
+    volumes:
+      [
+        ..:/pubxmono,
+        ./services/mariadb/schema.sql:/docker-entrypoint-initdb.d/schema.sql:rw,
+      ]
     command: --default-authentication-plugin=mysql_native_password
     environment:
       DEPLOYMENT_ROLE: "dev-db"
@@ -35,7 +38,7 @@ services:
     build: services/aerospike
   bidder:
     build: services/bidder
-    volumes: [ ..:/pubxmono ]
+    volumes: [..:/pubxmono]
     depends_on:
       - mariadb
       - redis
@@ -51,7 +54,7 @@ services:
       - "9231:9231"
   dashboard:
     build: services/dashboard
-    volumes: [ ..:/pubxmono ]
+    volumes: [..:/pubxmono]
     depends_on:
       - mariadb
       - redis
@@ -62,7 +65,7 @@ services:
       DEPLOYMENT_ROLE: "dev-dashboard"
   nginx:
     build: services/nginx
-    volumes: [ ..:/pubxmono]
+    volumes: [..:/pubxmono]
     depends_on:
       - bidder
       - dashboard
@@ -74,7 +77,12 @@ services:
   workspace:
     init: true
     build: services/workspace
-    volumes: [ ..:/pubxmono, ./services/workspace/dev-pubx-mono.json:/var/secrets/google/key.json, /var/run/docker.sock:/var/run/docker-host.sock]
+    volumes:
+      [
+        ..:/pubxmono,
+        ./services/workspace/dev-pubx-mono.json:/var/secrets/google/key.json,
+        /var/run/docker.sock:/var/run/docker-host.sock,
+      ]
     depends_on:
       - mariadb
       - nginx
@@ -89,7 +97,7 @@ services:
       - global.env
   ortbtcpd:
     build: services/ortb-tcpd
-    volumes: [ ..:/pubxmono ]
+    volumes: [..:/pubxmono]
     env_file:
       - global.env
     ports:

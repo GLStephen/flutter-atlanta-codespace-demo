@@ -6,7 +6,6 @@
     "dockerComposeFile": "docker-compose.yml",
     "userEnvProbe": "none",
     "onCreateCommand": "bash .devcontainer/services/workspace/onCreate.sh",
-    // "postCreateCommand": "bash -i -c 'nvm install --lts'",
     "forwardPorts": [8091],
     "portsAttributes": {
         "8091": {

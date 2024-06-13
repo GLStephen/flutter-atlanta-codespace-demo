@@ -1,0 +1,64 @@
+{
+	"name": "PubWise Admin",
+	"service": "workspace",
+	"remoteUser": "vscode",
+	"shutdownAction": "stopCompose",
+	"dockerComposeFile": "docker-compose.yml",
+	"onCreateCommand": "bash .devcontainer/services/workspace/onCreate.sh",
+	"forwardPorts": [8080],
+    "portsAttributes": {
+		"8080": {
+			"label": "HTTP"
+		}
+	},
+	"features": {
+		"docker-from-docker": {
+			"version": "latest",
+			"moby": true,
+			"dockerDashComposeVersion": "v1"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"bmewburn.vscode-intelephense-client",
+				"humao.rest-client",
+				"gruntfuggly.todo-tree",
+				"EditorConfig.EditorConfig",
+				"mikestead.dotenv",
+				"shufo.vscode-blade-formatter",
+				"onecentlin.laravel-blade",
+				"redhat.vscode-yaml",
+				"tyriar.sort-lines",
+				"mehedidracula.php-namespace-resolver",
+				"alefragnani.bookmarks",
+				"octref.vetur",
+				"eamodio.gitlens",
+				"github.vscode-pull-request-github",
+				"neilbrayfield.php-docblocker",
+				"mohamedbenhida.laravel-intellisense",
+				"xdebug.php-debug",
+				"cweijan.vscode-database-client2",
+				"getpsalm.psalm-vscode-plugin"
+			],
+			"settings": {
+				"githubIssues.issueBranchTitle": "${user}-issue${issueNumber}",
+				"githubIssues.useBranchForIssues": "prompt",
+				"terminal.integrated.profiles.linux": {
+					"bash": {
+						"path": "/bin/bash",
+						"args": [
+							"-l"
+						]
+					}
+				},
+				"[php]": {
+					"editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+				},
+				"[blade]": {
+					"editor.defaultFormatter": "onecentlin.laravel-blade"
+				}
+			}
+		}
+	},
+}
