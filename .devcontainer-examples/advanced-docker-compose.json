@@ -1,0 +1,102 @@
+
+version: '3.7'
+services:
+  mariadb:
+    build: services/mariadb
+    volumes: [ ..:/pubxmono, ./services/mariadb/schema.sql:/docker-entrypoint-initdb.d/schema.sql:rw ]
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      DEPLOYMENT_ROLE: "dev-db"
+      MYSQL_DATABASE: "dashboard"
+      MYSQL_ROOT_HOST: "%"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_USER: "dev"
+      MYSQL_PASSWORD: "dev"
+    ports:
+      - "3306:3306"
+  fluentbit:
+    build: services/fluentbit
+    ports:
+      - "24224:24224"
+    volumes:
+      - ./services/fluentbit/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
+      - ./services/fluentbit/streams.conf:/fluent-bit/etc/streams.conf
+      - ./services/fluentbit/parsers.conf:/fluent-bit/etc/parsers.conf
+      - ./services/fluentbit/dev-pubwise-d017ead76452.json:/fluent-bit/etc/dev-pubwise-d017ead76452.json
+  fluentd:
+    build: services/fluentd
+    ports:
+      - "24225:24224"
+  redis:
+    build: services/redis
+    ports:
+      - "6379:6379"
+  aerospike:
+    build: services/aerospike
+  bidder:
+    build: services/bidder
+    volumes: [ ..:/pubxmono ]
+    depends_on:
+      - mariadb
+      - redis
+      - aerospike
+    env_file:
+      - global.env
+    environment:
+      DEPLOYMENT_ROLE: "dev-bidder"
+    ports:
+      - "8092:1000"
+      - "9229:9229"
+      - "9230:9230"
+      - "9231:9231"
+  dashboard:
+    build: services/dashboard
+    volumes: [ ..:/pubxmono ]
+    depends_on:
+      - mariadb
+      - redis
+      - aerospike
+    env_file:
+      - global.env
+    environment:
+      DEPLOYMENT_ROLE: "dev-dashboard"
+  nginx:
+    build: services/nginx
+    volumes: [ ..:/pubxmono]
+    depends_on:
+      - bidder
+      - dashboard
+    env_file:
+      - global.env
+    ports:
+      - "8090:8080"
+      - "8091:8081"
+  workspace:
+    init: true
+    build: services/workspace
+    volumes: [ ..:/pubxmono, ./services/workspace/dev-pubx-mono.json:/var/secrets/google/key.json, /var/run/docker.sock:/var/run/docker-host.sock]
+    depends_on:
+      - mariadb
+      - nginx
+      - bidder
+      - dashboard
+      - redis
+      - aerospike
+    environment:
+      COMPOSER_MEMORY_LIMIT: -1
+      DEPLOYMENT_ROLE: "dev-workspace"
+    env_file:
+      - global.env
+  ortbtcpd:
+    build: services/ortb-tcpd
+    volumes: [ ..:/pubxmono ]
+    env_file:
+      - global.env
+    ports:
+      - "10001:10001"
+    environment:
+      DEPLOYMENT_ROLE: "dev-ortb-tcpd"
+      TCP_SERVER_HOST: "0.0.0.0"
+      TCP_SERVER_PORT: 10001
+      MEDIAGUARD_CERT_PATH: "/usr/local/bin/mediaguard.crt"
+      MEDIAGUARD_KEY_PATH: "/usr/local/bin/mediaguard.key"

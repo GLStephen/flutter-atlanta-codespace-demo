@@ -1,0 +1,47 @@
+{
+    "name": "PubX Monorepo",
+    "service": "workspace",
+    "remoteUser": "vscode",
+    "shutdownAction": "stopCompose",
+    "dockerComposeFile": "docker-compose.yml",
+    "userEnvProbe": "none",
+    "onCreateCommand": "bash .devcontainer/services/workspace/onCreate.sh",
+    // "postCreateCommand": "bash -i -c 'nvm install --lts'",
+    "forwardPorts": [8091],
+    "portsAttributes": {
+        "8091": {
+            "label": "HTTP"
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+        "ghcr.io/devcontainers/features/node:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "eamodio.gitlens",
+                "cweijan.vscode-mysql-client2",
+                "humao.rest-client",
+                "bmewburn.vscode-intelephense-client",
+                "dbaeumer.vscode-eslint",
+                "golang.go",
+                "GitHub.copilot",
+                "GitHub.copilot-chat"
+            ],
+            "settings": {
+                "githubIssues.issueBranchTitle": "${user}-issue${issueNumber}",
+                "githubIssues.useBranchForIssues": "prompt",
+                "simple-php-cs-fixer.useConfig": true,
+                "simple-php-cs-fixer.config": ".php_cs.dist.php",
+                "simple-php-cs-fixer.save": false,
+                "simple-php-cs-fixer.usingCache": false,
+                "go.useLanguageServer": true,
+                "editor.defaultFormatter": "esbenp.prettier-vscode",
+                "[javascript]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode"
+                }
+            }
+        }
+    }
+}
